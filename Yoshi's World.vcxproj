@@ -127,13 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ally.cpp" />
+    <ClCompile Include="Description.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ItemDescription.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPCDescription.cpp" />
+    <ClCompile Include="Status.cpp" />
+    <ClCompile Include="TalkableNPC.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ally.h" />
+    <ClInclude Include="Description.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemDescription.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="NPCDescription.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Qualifiers.h" />
+    <ClInclude Include="Status.h" />
+    <ClInclude Include="TalkableNPC.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

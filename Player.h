@@ -17,6 +17,10 @@ public:
 		m_name{ name }, m_level{ level }, m_inventory{}
 	{ }
 
+	std::string getName() const {
+		return m_name;
+	}
+
 	void identify() {
 		std::cout << "Name: " << m_name << "\nLevel: " << m_level << "\n";
 	}
@@ -29,10 +33,33 @@ public:
 		m_inventory.view();
 	}
 
+	// Move constructor
+	Player(Player&& other) noexcept :
+		m_name{ std::move(other.m_name) },
+		m_level{ other.m_level },
+		m_exp{ other.m_exp },
+		m_primary{ std::move(other.m_primary) },
+		m_inventory{ std::move(other.m_inventory) } {
+		other.m_level = 1; // Reset other's level
+		other.m_exp = 0;   // Reset other's experience
+	}
 
+	// Move assignment operator
+	Player& operator=(Player&& other) noexcept {
+		if (this != &other) {
+			m_name = other.m_name;
+			m_level = other.m_level;
+			m_exp = other.m_exp;
+			m_primary = std::move(other.m_primary);
+
+			other.m_level = 1; // Reset other's level
+			other.m_exp = 0;   // Reset other's experience
+		}
+		return *this;
+	}
 
 private:
-	const std::string m_name;
+	std::string m_name;
 	int m_level;
 	int m_exp{ 0 };
 	Item m_primary;
