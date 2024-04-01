@@ -17,19 +17,17 @@ public:
 		m_name{ name }, m_level{ level }, m_inventory{}
 	{ }
 
-	std::string getName() const {
+	inline std::string getName() const {
 		return m_name;
 	}
 
-	void identify() {
+	inline void identify() {
 		std::cout << "Name: " << m_name << "\nLevel: " << m_level << "\n";
 	}
 
-	bool pickUp(Item& item) {
-		return m_inventory.add(item);
-	}
+	inline bool pickUp(Item& item) { return m_inventory.add(item); }
 
-	void viewInventory() {
+	inline void viewInventory() {
 		m_inventory.view();
 	}
 
@@ -65,16 +63,8 @@ private:
 	Item m_primary;
 	Inventory m_inventory{};
 
-	void gainExperience(int exp) {
-		m_exp += exp;
-		if (m_exp >= 100)
-			levelUp();
-	}
-
-	void levelUp() {
-		m_exp -= 100;
-		++m_level;
-	}
+	void gainExperience(int exp);
+	void levelUp();
 };
 
 #endif // !PLAYER_H

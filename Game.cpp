@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Game.h"
+#include "Qualifiers.h"
 #include <string>
 #include <utility>
 #include <iostream>
@@ -28,6 +29,16 @@ void Game::runGame() {
 void Game::endGame() {
 
 }
+
+//const Enemy spawnEnemy(Qualifiers::Difficulty difficulty = Qualifiers::EASY) {
+//
+//}
+//const Ally spawnAlly(Qualifiers::Difficulty difficulty = Qualifiers::EASY) {
+//
+//}
+//const TalkableNPC spawnNPC(Qualifiers::Difficulty difficulty = Qualifiers::EASY) {
+//
+//}
 
 void Game::prompt(std::string&& message) const {
 	std::cout << message << "\n";

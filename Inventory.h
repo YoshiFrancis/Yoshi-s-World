@@ -16,25 +16,9 @@ public:
 
 	Inventory(const Inventory& inventory) {}
 
-	bool add(Item& item) {
-		if (m_pockets.size() < m_space) {
-			m_pockets.push_back(item);
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-
-	void view() {
-		int count = 1;
-		for (auto& item : m_pockets) {
-			std::cout << count << "." << item.getName() << "\n";
-			++count;
-		}
-	}
-
-	int getSpace() const { return m_space; }
+	bool add(Item& item);
+	void view() const;
+	inline int getSpace() const { return m_space; }
 
 private:
 	const int m_space{};

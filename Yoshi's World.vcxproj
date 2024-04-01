@@ -131,10 +131,13 @@
     <ClCompile Include="Description.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemDescription.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="NPCDescription.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Status.cpp" />
     <ClCompile Include="TalkableNPC.cpp" />
   </ItemGroup>

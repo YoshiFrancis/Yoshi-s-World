@@ -15,12 +15,9 @@ public:
 	Item() : Item{ "Air", Qualifiers::COMMON }
 	{}
 
-	void identify() const {
-		std::cout << "Name: " << m_name << "\n";
-		std::cout << "Rarirty: " << Qualifiers::rarities[m_rarity] << "\n";
-	}
+	void identify() const;
 
-	std::string getName() const { return m_name; }
+	inline std::string getName() const { return m_name; }
 
 private:
 	std::string m_name{};
