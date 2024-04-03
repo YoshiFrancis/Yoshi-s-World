@@ -10,6 +10,8 @@ public:
 	Game()
 	{
 		getUserInput();
+		m_player.sayDescription();
+		m_player.sayStats();
 	}
 	void getUserInput();
 

@@ -5,6 +5,7 @@
 Container class containing all the status identifiers of all fightables
 */
 
+#include <vector>
 
 class Status
 {
@@ -18,11 +19,12 @@ public:
 		m_defence{ defence }
 	{}
 
-	const int getLevel() const { return m_level; }
-	const int getHealth() const { return m_health; }
-	const int getDamage() const { return m_health; }
-	const int getSpeed() const { return m_speed; }
-	const int getDefence() const { return m_defence; }
+	inline const int getLevel() const { return m_level; }
+	inline const int getMaxHealth() const { return m_maxHealth; }
+	inline const int getHealth() const { return m_health; }
+	inline const int getDamage() const { return m_health; }
+	inline const int getSpeed() const { return m_speed; }
+	inline const int getDefence() const { return m_defence; }
 
 	void takeDamage(int damage) { m_health -= damage; }
 	void update(int level, int maxHealth, int damage, int speed, int defence) {
@@ -32,6 +34,11 @@ public:
 		m_damage += damage;
 		m_speed += speed;
 		m_defence += defence;
+	}
+
+	std::vector<int> getFull() {
+		return { m_level, m_maxHealth, m_health, m_damage, m_speed, m_defence };
+		
 	}
 
 private:

@@ -4,6 +4,7 @@
 #include "Status.h"
 #include "Description.h"
 #include <string>
+#include <vector>
 #include <iostream>
 #include <utility>
 
@@ -11,7 +12,7 @@ class Player {
 
 public:
 
-	Player(std::string name = "Yoshi", Status status={1,1,1,1,1}) : m_status{status}, m_description{name, "The Player Who has come from a far away land..."}
+	Player(std::string name = "Yoshi", Status status={}) : m_status{status}, m_description{name, "The Player Who has come from a far away land..."}
 	{}
 
 	Player(Player&& other) noexcept : m_status{ other.m_status }, m_description{other.m_description}
@@ -26,6 +27,9 @@ public:
 		}
 		return *this;
 	}
+
+	void sayDescription() const;
+	void sayStats() const;
 
 private:
 	Status m_status{};
