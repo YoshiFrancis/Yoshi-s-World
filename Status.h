@@ -9,7 +9,7 @@ Container class containing all the status identifiers of all fightables
 class Status
 {
 public:
-	Status(int level, int maxHealth, int damage, int speed, int defence) :
+	Status(int level=1, int maxHealth=10, int damage=5, int speed=5, int defence=5) :
 		m_level{ level },
 		m_maxHealth{ maxHealth },
 		m_health{ maxHealth },

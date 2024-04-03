@@ -1,70 +1,35 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Item.h"
-#include "Inventory.h"
+#include "Status.h"
+#include "Description.h"
 #include <string>
 #include <iostream>
-
+#include <utility>
 
 class Player {
+
 public:
 
-	Player(int level = 5) : m_name{ "Yoshi" }, m_level{ level }, m_inventory{}
+	Player(std::string name = "Yoshi", Status status={1,1,1,1,1}) : m_status{status}, m_description{name, "The Player Who has come from a far away land..."}
 	{}
 
-	Player(std::string name, int level = 1) :
-		m_name{ name }, m_level{ level }, m_inventory{}
+	Player(Player&& other) noexcept : m_status{ other.m_status }, m_description{other.m_description}
 	{ }
 
-	inline std::string getName() const {
-		return m_name;
-	}
+	Player& operator=(const Player&) = delete;
 
-	inline void identify() {
-		std::cout << "Name: " << m_name << "\nLevel: " << m_level << "\n";
-	}
-
-	inline bool pickUp(Item& item) { return m_inventory.add(item); }
-
-	inline void viewInventory() {
-		m_inventory.view();
-	}
-
-	// Move constructor
-	Player(Player&& other) noexcept :
-		m_name{ std::move(other.m_name) },
-		m_level{ other.m_level },
-		m_exp{ other.m_exp },
-		m_primary{ std::move(other.m_primary) },
-		m_inventory{ std::move(other.m_inventory) } {
-		other.m_level = 1; // Reset other's level
-		other.m_exp = 0;   // Reset other's experience
-	}
-
-	// Move assignment operator
-	Player& operator=(Player&& other) noexcept {
+	inline Player& operator=(Player&& other) noexcept {
 		if (this != &other) {
-			m_name = other.m_name;
-			m_level = other.m_level;
-			m_exp = other.m_exp;
-			m_primary = std::move(other.m_primary);
-
-			other.m_level = 1; // Reset other's level
-			other.m_exp = 0;   // Reset other's experience
+			m_status = other.m_status;
+			m_description = std::move(other.m_description);
 		}
 		return *this;
 	}
 
 private:
-	std::string m_name;
-	int m_level;
-	int m_exp{ 0 };
-	Item m_primary;
-	Inventory m_inventory{};
-
-	void gainExperience(int exp);
-	void levelUp();
+	Status m_status{};
+	Description m_description{};
 };
 
 #endif // !PLAYER_H

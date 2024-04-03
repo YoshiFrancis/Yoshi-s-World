@@ -1,0 +1,3 @@
+Yoshi Town
+Dad Yoshi,Enemy,Why must you go now? Yoshi shall not pass!,
+Mom Yoshi,Enemy
