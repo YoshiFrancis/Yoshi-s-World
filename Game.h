@@ -3,7 +3,6 @@
 
 #include "Player.h"
 #include "Enemy.h"
-#include <string>
 
 class Game {
 public:
@@ -14,13 +13,15 @@ public:
 		m_player.sayDescription();
 		m_player.sayStats();
 		Enemy myenemy{"Mario"};
+		myenemy.takeDamage(m_player.getStats().getDamage());
 		myenemy.sayDescription();
 		myenemy.sayStats();
+
 	}
 	void getUserInput();
+	void battle(Player& player, Enemy& enemy);
 
 private:
-	std::string m_name{};
 	Player m_player;
 };
 
