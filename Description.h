@@ -2,6 +2,7 @@
 #define DESCRIPTION_H
 
 #include <string_view>
+#include <iostream>
 
 class Description
 {
@@ -27,9 +28,10 @@ public:
 
 	inline const std::string_view getName() const { return m_name; }
 	inline const std::string_view getDescription() const { return m_description; }
+	inline void setName(std::string_view name) { m_name = name; }
 
 private:
-	std::string_view m_name{};
+	std::string m_name{};
 	std::string_view m_description{};
 };
 

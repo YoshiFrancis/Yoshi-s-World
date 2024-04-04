@@ -6,15 +6,20 @@ void Attackable::sayStats() const {
 		<< "\nDamage: " << Attackable::m_status.getDamage() << "\nSpeed: " << Attackable::m_status.getSpeed() << "\nDefence: " << Attackable::m_status.getDefence() << "\n";
 }
 
+void Attackable::sayDescription() const {
+	std::cout << "Name: " << Attackable::m_description.getName() << "\nDescription: " << Attackable::m_description.getDescription() << "\n";
+}
+
 void Attackable::takeDamage(int damage) {
 	Attackable::getStats().takeDamage(damage);
 }
 
 bool Attackable::attack(Attackable& enemy) {
+	std::cout << Attackable::m_description.getName() << " has attacked " << enemy.m_description.getName() << "!\n";
 	enemy.takeDamage(Attackable::getStats().getDamage());
 	int health = enemy.getStats().getHealth();
 	if (health <= 0) {
-		std::cout << "Player has defeated the enemy!\n";
+		std::cout << Attackable::m_description.getName() << " has defeated " << enemy.m_description.getName() << "!\n";
 		return true;
 	}
 	return false;

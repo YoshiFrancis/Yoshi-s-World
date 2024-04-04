@@ -3,6 +3,7 @@
 
 #include "Player.h"
 #include "Enemy.h"
+#include  "Attackable.h"
 
 class Game {
 public:
@@ -14,11 +15,9 @@ public:
 		Enemy myenemy{"Mario"};
 		m_player.attack(myenemy);
 		m_player.sayStats();
-
-
 	}
 	void getUserInput();
-	void battle(Player& player, Enemy& enemy);
+	bool battle(Attackable& player, Attackable& enemy);
 
 private:
 	Player m_player;
