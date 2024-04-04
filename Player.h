@@ -28,8 +28,9 @@ public:
 		return *this;
 	}
 
+	inline void levelUp() { m_status.update(1, 1, 1, 1, 1); }
+	bool attack(Attackable& enemy) override;
 	void sayDescription() const;
-	// void attack(Attackable& enemy) override; // not const because the player could level up -- another approach is to return a bool and gain experience if true
 
 private:
 	Description m_description{};

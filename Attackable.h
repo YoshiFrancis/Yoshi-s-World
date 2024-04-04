@@ -12,7 +12,7 @@ public:
 
 	void sayStats() const;
 	void takeDamage(int damage);
-	virtual void attack(Attackable& enemy);
+	virtual bool attack(Attackable& enemy);
 	inline Status& getStats() { return m_status; }
 
 protected:

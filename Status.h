@@ -27,7 +27,7 @@ public:
 	inline const int getDefence() const { return m_defence; }
 
 	inline void takeDamage(int damage) { m_health -= damage; }
-	void update(int level, int maxHealth, int damage, int speed, int defence);
+	void update(int maxHealth, int health, int damage, int speed, int defence, int level=1);
 
 private:
 	int m_level{};

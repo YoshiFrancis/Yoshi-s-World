@@ -10,6 +10,12 @@ void Attackable::takeDamage(int damage) {
 	Attackable::getStats().takeDamage(damage);
 }
 
-void Attackable::attack(Attackable& enemy) {
+bool Attackable::attack(Attackable& enemy) {
 	enemy.takeDamage(Attackable::getStats().getDamage());
+	int health = enemy.getStats().getHealth();
+	if (health <= 0) {
+		std::cout << "Player has defeated the enemy!\n";
+		return true;
+	}
+	return false;
 }

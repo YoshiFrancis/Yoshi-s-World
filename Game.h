@@ -11,9 +11,11 @@ public:
 	{
 		getUserInput();
 		m_player.sayDescription();
-		m_player.sayStats();
 		Enemy myenemy{"Mario"};
 		m_player.attack(myenemy);
+		m_player.sayStats();
+
+
 	}
 	void getUserInput();
 	void battle(Player& player, Enemy& enemy);
