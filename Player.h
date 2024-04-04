@@ -29,12 +29,9 @@ public:
 	}
 
 	void sayDescription() const;
-	//void sayStats() const;
-	//void takeDamage(int damage);
-	//inline Status& getStats() { return m_status; }
+	// void attack(Attackable& enemy) override; // not const because the player could level up -- another approach is to return a bool and gain experience if true
 
 private:
-	//Status m_status{};
 	Description m_description{};
 };
 

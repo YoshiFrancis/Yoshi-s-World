@@ -9,3 +9,7 @@ void Attackable::sayStats() const {
 void Attackable::takeDamage(int damage) {
 	Attackable::getStats().takeDamage(damage);
 }
+
+void Attackable::attack(Attackable& enemy) {
+	enemy.takeDamage(Attackable::getStats().getDamage());
+}

@@ -13,10 +13,7 @@ public:
 		m_player.sayDescription();
 		m_player.sayStats();
 		Enemy myenemy{"Mario"};
-		myenemy.takeDamage(m_player.getStats().getDamage());
-		myenemy.sayDescription();
-		myenemy.sayStats();
-
+		m_player.attack(myenemy);
 	}
 	void getUserInput();
 	void battle(Player& player, Enemy& enemy);
