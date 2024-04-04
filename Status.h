@@ -22,7 +22,7 @@ public:
 	inline const int getLevel() const { return m_level; }
 	inline const int getMaxHealth() const { return m_maxHealth; }
 	inline const int getHealth() const { return m_health; }
-	inline const int getDamage() const { return m_health; }
+	inline const int getDamage() const { return m_damage; }
 	inline const int getSpeed() const { return m_speed; }
 	inline const int getDefence() const { return m_defence; }
 

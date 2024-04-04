@@ -2,8 +2,21 @@
 #define GAME_H
 
 #include "Player.h"
-#include "Enemy.h"
-#include  "Attackable.h"
+#include "Level.h"
+
+/*
+
+TODO:
+- enemy generator
+- level system to generate enemies each round
+	- make it read from text file to generate info for level
+- loop through levels and let player battle on each level
+
+Future ideas to expand on
+- Create weapons and items for player to loot and collect
+- Add qualifiers to all items and npcs
+
+*/
 
 class Game {
 public:
@@ -11,13 +24,9 @@ public:
 	Game()
 	{
 		getUserInput();
-		m_player.sayDescription();
-		Enemy myenemy{"Mario"};
-		m_player.attack(myenemy);
-		m_player.sayStats();
+		Level(1, m_player);
 	}
 	void getUserInput();
-	bool battle(Attackable& player, Attackable& enemy);
 
 private:
 	Player m_player;
