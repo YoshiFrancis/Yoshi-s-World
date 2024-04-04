@@ -1,13 +1,13 @@
 #ifndef DESCRIPTION_H
 #define DESCRIPTION_H
 
-#include <string>
+#include <string_view>
 
 class Description
 {
 public:
 
-	Description(std::string name="Unknown", std::string description="") : m_name{name}, m_description{description}
+	Description(std::string_view name="Unknown", std::string_view description="") : m_name{name}, m_description{description}
 	{}
 
 	Description(const Description& description) : m_name{ description.m_name }, m_description{description.m_description}
@@ -25,12 +25,12 @@ public:
 		return *this;
 	}
 
-	inline const std::string getName() const { return m_name; }
-	inline const std::string getDescription() const { return m_description; }
+	inline const std::string_view getName() const { return m_name; }
+	inline const std::string_view getDescription() const { return m_description; }
 
 private:
-	std::string m_name{};
-	std::string m_description{};
+	std::string_view m_name{};
+	std::string_view m_description{};
 };
 
 

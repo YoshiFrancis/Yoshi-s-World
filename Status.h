@@ -26,20 +26,8 @@ public:
 	inline const int getSpeed() const { return m_speed; }
 	inline const int getDefence() const { return m_defence; }
 
-	void takeDamage(int damage) { m_health -= damage; }
-	void update(int level, int maxHealth, int damage, int speed, int defence) {
-		m_level += level;
-		m_maxHealth += maxHealth;
-		m_health += maxHealth;
-		m_damage += damage;
-		m_speed += speed;
-		m_defence += defence;
-	}
-
-	std::vector<int> getFull() {
-		return { m_level, m_maxHealth, m_health, m_damage, m_speed, m_defence };
-		
-	}
+	inline void takeDamage(int damage) { m_health -= damage; }
+	void update(int level, int maxHealth, int damage, int speed, int defence);
 
 private:
 	int m_level{};

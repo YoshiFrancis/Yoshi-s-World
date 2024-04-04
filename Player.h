@@ -12,7 +12,7 @@ class Player {
 
 public:
 
-	Player(std::string name = "Yoshi", Status status={}) : m_status{status}, m_description{name, "The Player Who has come from a far away land..."}
+	Player(const std::string& name = "Yoshi", Status status={}) : m_status{status}, m_description{name, "The Player Who has come from a far away land..."}
 	{}
 
 	Player(Player&& other) noexcept : m_status{ other.m_status }, m_description{other.m_description}
