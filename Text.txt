@@ -1,3 +1,10 @@
-Yoshi Town
-Dad Yoshi,Enemy,Why must you go now? Yoshi shall not pass!,
-Mom Yoshi,Enemy
+Level Name
+LevelDescription
+First Character Name
+Description text
+Classification (Enemy)
+Level
+Max Health
+Damage
+Speed
+Defence

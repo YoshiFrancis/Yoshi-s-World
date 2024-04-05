@@ -19,6 +19,9 @@ public:
 		m_defence{ defence }
 	{}
 
+	Status(std::vector<int>& statusVec) : Status{ statusVec[0], statusVec[1], statusVec[2], statusVec[3], statusVec[4] }
+	{}
+
 	inline const int getLevel() const { return m_level; }
 	inline const int getMaxHealth() const { return m_maxHealth; }
 	inline const int getHealth() const { return m_health; }

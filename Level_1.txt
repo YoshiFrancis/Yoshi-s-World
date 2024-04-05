@@ -1,0 +1,18 @@
+Yoshi Town
+Yoshi Town is a cool place
+Dad
+The father of the hero
+Enemy
+1
+12
+2
+3
+7
+Mom
+The mother of the hero
+Enemy
+1
+20
+0
+2
+10
