@@ -16,16 +16,20 @@ public:
 	Level(int level, Player& player) : m_level{level}, m_player{player}
 	{
 		std::cout << "Level " << level << ":\n";
-		m_player.sayDescription();
-		Enemy myenemy{ spawnEnemy() };
-		battle(m_player, myenemy);
-		readFile();
+		readFile(level);
+		while (!m_enemies.empty())
+		{
+			if (battle(m_player, m_enemies.front()))
+				m_enemies.pop();
+			else
+				break;
+		}
 
 	}
 
 	bool battle(Attackable& player, Attackable& enemy);
 	Enemy spawnEnemy(Status status = {}, Description description={"Enemy", "Lost wolf trying to stop you..."}) const;
-	void readFile();
+	void readFile(const int level);
 
 
 private:

@@ -16,3 +16,11 @@ Enemy
 0
 2
 10
+Brother
+The brother of the hero
+Enemy
+3
+20
+3
+6
+2

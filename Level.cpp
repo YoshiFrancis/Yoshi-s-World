@@ -33,8 +33,8 @@ Enemy Level::spawnEnemy(Status status, Description description) const {
 	return { status, description };
 }
 
-void Level::readFile() {
-	std::ifstream inf{ "Level_1.txt" };
+void Level::readFile(const int level) {
+	std::ifstream inf{ "Level_" + std::to_string(level) + ".txt" };
 	if (!inf) {
 		std::cerr << "Could not open Level_" << Level::m_level << ".txt\n";
 	}
