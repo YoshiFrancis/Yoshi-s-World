@@ -3,6 +3,7 @@
 
 #include "Status.h"
 #include "Description.h"
+#include "SkillSet.h"
 #include <string_view>
 #include <iostream>
 
