@@ -3,10 +3,13 @@
 
 #include "Status.h"
 #include "Description.h"
+#include "Skill.h"
 #include "SkillSet.h"
+
 #include <string_view>
 #include <iostream>
 
+class Skill;
 
 
 class Attackable
@@ -25,13 +28,13 @@ public:
 	virtual bool attack(Attackable& enemy, int damage = 1);
 	inline Status& getStats() { return m_status; }
 	inline std::string_view getName() { return m_description.getName(); }
-	//inline void addSkill(Skill* skill) { m_skills.addSkill(skill); }
+	inline void addSkill(Skill* skill) { }
 
 
 protected:
-	Status m_status{};
-	Description m_description{};
-	//SkillSet m_skills;
+	Status m_status;
+	Description m_description;
 };
+
 
 #endif

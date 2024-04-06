@@ -1,5 +1,4 @@
 #include "SkillSet.h"
-#include "Skill.h"
 
 void SkillSet::displaySkills() const {
 	for (auto& skill : m_skills) {

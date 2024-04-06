@@ -25,10 +25,17 @@ UserInput:
 
 #include "Game.h"
 
+#include "Swing.h"
+#include "SkillSet.h"
+#include "Attackable.h"
 
 int main(int argc, char* argv[]) {
 
-	Game game;
+	SkillSet test;
+	Swing swingSkill{};
+	test.addSkill(&swingSkill);
+	test.displaySkills();
+	//Game game;	
 	return 1;
 
 }

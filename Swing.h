@@ -1,5 +1,5 @@
 #ifndef SWING_H
-#define SWING_h
+#define SWING_H
 
 #include "Skill.h"
 

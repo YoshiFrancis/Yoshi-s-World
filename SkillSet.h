@@ -1,11 +1,9 @@
-#ifndef SKILLSET_H
-#define SKILLSET_H
+#pragma once
 
 #include "Skill.h"
-#include "SkillSet.h"
+#include "Attackable.h"
 #include <vector>
 
-class Skill;
 
 class SkillSet
 {
@@ -32,6 +30,6 @@ private:
 };
 
 
-#endif // !SKILLSET_H
+
 
 
