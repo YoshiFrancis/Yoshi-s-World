@@ -1,5 +1,5 @@
 #include "SkillSet.h"
-#include "SkillDescription.h"
+#include "Skill.h"
 
 void SkillSet::displaySkills() const {
 	for (auto& skill : m_skills) {
@@ -8,7 +8,7 @@ void SkillSet::displaySkills() const {
 	std::cout << "\n";
 }
 
-const bool SkillSet::addSkill(ISkill* skill) {
+bool SkillSet::addSkill(Skill* skill) {
 	if (SkillSet::m_currSkills <= 3) {
 		m_skills.push_back(skill);
 		++m_currSkills;

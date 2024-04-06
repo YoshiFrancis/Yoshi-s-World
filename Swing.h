@@ -1,16 +1,16 @@
 #ifndef SWING_H
 #define SWING_h
 
-#include "SkillDescription.h"
-#include "ISkill.h"
+#include "Skill.h"
 
-class Swing : public SkillDescription, public ISkill
+class Swing : public Skill
 {
 public:
-	Swing() : SkillDescription{ "Swing", "Swing at the opponent dealing damage", SkillDescription::SkillType::ATTACK, 30 }
+	Swing() : Skill{ "Swing", "Swing at the opponent dealing damage", Skill::SkillType::ATTACK, 30 }
 	{}
 
-	void action(Attackable& user, Attackable& target);
+	void action(Attackable& user, Attackable& target) override;
+	
 };
 
 #endif // !SWING_H

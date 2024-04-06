@@ -42,13 +42,13 @@
     <ClCompile Include="Level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SkillDescription.cpp">
+    <ClCompile Include="Skill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Swing.cpp">
-      <Filter>Header Files\Skills</Filter>
-    </ClCompile>
-    <ClCompile Include="SkillSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,16 +80,13 @@
     <ClInclude Include="Level.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SkillDescription.h">
+    <ClInclude Include="Skill.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Swing.h">
-      <Filter>Header Files\Skills</Filter>
     </ClInclude>
     <ClInclude Include="SkillSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ISkill.h">
+    <ClInclude Include="Swing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

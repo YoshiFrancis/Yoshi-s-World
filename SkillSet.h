@@ -1,19 +1,20 @@
 #ifndef SKILLSET_H
 #define SKILLSET_H
 
-#include "ISkill.h"
+#include "Skill.h"
+#include "SkillSet.h"
 #include <vector>
-#include <initializer_list>
 
+class Skill;
 
 class SkillSet
 {
 public:
-	SkillSet(std::initializer_list<ISkill*> skills)
+	SkillSet(std::vector<Skill*> skills = {})
 	{
 
 		if (skills.size() <= 4) {
-			for (auto skill : skills) {
+			for (Skill* skill : skills) {
 				m_skills.push_back(skill);
 			}
 		}
@@ -21,12 +22,12 @@ public:
 
 	void displaySkills() const;
 	//const bool useSkill(std::string_view skillName);
-	const bool addSkill(ISkill* skill);
+	bool addSkill(Skill* skill);
 	//void removeSkill(Skill skill);
 
 private:
 	const int m_maxSkills{ 4 };
-	std::vector<ISkill*> m_skills{};
+	std::vector<Skill*> m_skills{};
 	int m_currSkills{ 0 };
 };
 

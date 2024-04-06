@@ -1,8 +1,6 @@
 #ifndef  ENEMY_H
 #define ENEMY_H
 
-#include "Description.h"
-#include "Status.h"
 #include "Attackable.h"
 #include <string_view>
 
