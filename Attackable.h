@@ -11,7 +11,6 @@
 
 class Skill;
 
-
 class Attackable
 {
 public:

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Skill.h"
-#include "Attackable.h"
 #include <vector>
 
 
