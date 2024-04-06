@@ -7,7 +7,8 @@
 class ISkill {
 public:
 	virtual ~ISkill() = default;
-	virtual void action(Attackable& user, Attackable& target) = 0;
+	// I believe there is a circular dependency with this code
+	//virtual void action(Attackable& user, Attackable& target) = 0;
 	virtual inline std::string_view getDescription() const = 0;
 	virtual inline std::string_view getName() const = 0;
 };
