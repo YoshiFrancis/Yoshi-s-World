@@ -44,14 +44,9 @@ void Level::readFile(const int level) {
 		std::getline(inf, levelName);
 		std::getline(inf, levelDescription);
 		Level::m_description = { levelName, levelDescription };
-		
 		while (!inf.eof()) 
 			readCharacter(inf);
-		
-		
 	}
-
-	
 }
 
 void Level::readCharacter(std::ifstream& inf) {

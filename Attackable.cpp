@@ -14,9 +14,9 @@ void Attackable::takeDamage(int damage) {
 	Attackable::getStats().takeDamage(damage);
 }
 
-bool Attackable::attack(Attackable& enemy) {
+bool Attackable::attack(Attackable& enemy, int damage) {
 	std::cout << Attackable::m_description.getName() << " has attacked " << enemy.m_description.getName() << "!\n";
-	enemy.takeDamage(Attackable::getStats().getDamage());
+	enemy.takeDamage(damage);
 	int health = enemy.getStats().getHealth();
 	if (health <= 0) {
 		std::cout << Attackable::m_description.getName() << " has defeated " << enemy.m_description.getName() << "!\n";

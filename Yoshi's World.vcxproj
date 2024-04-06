@@ -138,7 +138,10 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="SkillSet.cpp" />
     <ClCompile Include="Status.cpp" />
+    <ClCompile Include="Swing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Attackable.h" />
@@ -149,7 +152,10 @@
     <ClInclude Include="Level.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Qualifiers.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="SkillSet.h" />
     <ClInclude Include="Status.h" />
+    <ClInclude Include="Swing.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Level_1.txt" />

@@ -21,7 +21,7 @@ Future ideas to expand on
 class Game {
 public:
 
-	Game()
+	Game() : m_player{}
 	{
 		getUserInput();
 		Level(1, m_player);
@@ -29,7 +29,7 @@ public:
 	void getUserInput();
 
 private:
-	Player m_player;
+	Player m_player{};
 };
 
 #endif // !GAME_h

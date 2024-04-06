@@ -28,7 +28,7 @@ public:
 
 	inline void levelUp() { m_status.update(1, 1, 1, 1, 1); }
 	inline void setName(std::string_view name) { m_description.setName(name); }
-	bool attack(Attackable& enemy) override;
+	bool attack(Attackable& enemy, int damage = 5) override;
 
 };
 

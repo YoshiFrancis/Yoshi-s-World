@@ -19,8 +19,9 @@ public:
 	void sayStats() const;
 	void sayDescription() const;
 	void takeDamage(int damage);
-	virtual bool attack(Attackable& enemy);
+	virtual bool attack(Attackable& enemy, int damage = 1);
 	inline Status& getStats() { return m_status; }
+	inline std::string_view getName() { return m_description.getName(); }
 
 
 protected:
