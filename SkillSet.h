@@ -20,7 +20,7 @@ public:
 		}
 	}
 
-	//void displaySkills() const;
+	void displaySkills() const;
 	//const bool useSkill(std::string_view skillName);
 	bool addSkill(Skill* skill);
 	//void removeSkill(Skill skill);
