@@ -4,8 +4,6 @@
 #include "Attackable.h"
 #include <string_view>
 
-class Attackable;
-
 class Skill
 {
 public:

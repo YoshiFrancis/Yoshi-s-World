@@ -1,11 +1,11 @@
 #include "SkillSet.h"
 
-void SkillSet::displaySkills() const {
-	for (auto& skill : m_skills) {
-		std::cout << skill->getName() << " || ";
-	}
-	std::cout << "\n";
-}
+//void SkillSet::displaySkills() const {
+//	for (auto& skill : m_skills) {
+//		std::cout << skill->getName() << " || ";
+//	}
+//	std::cout << "\n";
+//}
 
 bool SkillSet::addSkill(Skill* skill) {
 	if (SkillSet::m_currSkills <= 3) {

@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
 	SkillSet test;
 	Swing swingSkill{};
 	test.addSkill(&swingSkill);
-	test.displaySkills();
+	//test.displaySkills();
 	//Game game;	
 	return 1;
 

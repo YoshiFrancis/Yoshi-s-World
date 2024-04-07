@@ -3,13 +3,9 @@
 
 #include "Status.h"
 #include "Description.h"
-#include "Skill.h"
 #include "SkillSet.h"
-
 #include <string_view>
 #include <iostream>
-
-class Skill;
 
 class Attackable
 {

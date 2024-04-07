@@ -148,6 +148,7 @@
     <ClInclude Include="Description.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Includes.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Player.h" />
