@@ -34,7 +34,12 @@ int main(int argc, char* argv[]) {
 	SkillSet test;
 	Swing swingSkill{};
 	test.addSkill(&swingSkill);
+	std::cout << test.getCurrSkills() << "\n";
+
 	test.displaySkills();
+	test.removeSkill("Swing");
+	test.displaySkills();
+	std::cout << test.getCurrSkills() << "\n";
 	//Game game;	
 	return 1;
 
