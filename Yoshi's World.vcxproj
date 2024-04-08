@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Attackable.cpp" />
+    <ClCompile Include="CharacterDictionary.cpp" />
     <ClCompile Include="Description.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Attackable.h" />
+    <ClInclude Include="Brother.h" />
+    <ClInclude Include="CharacterDictionary.h" />
+    <ClInclude Include="Dad.h" />
     <ClInclude Include="Description.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Game.h" />

@@ -19,7 +19,7 @@ public:
 		readFile(level);
 		while (!m_enemies.empty())
 		{
-			if (battle(m_player, *(m_enemies.front())))
+			if (battle(m_player, m_enemies.front()))
 				m_enemies.pop();
 			else
 				break;
@@ -35,10 +35,11 @@ public:
 private:
 	const int m_level;
 	Player& m_player;
-	std::queue<Attackable*> m_enemies{};
+	std::queue<Attackable> m_enemies{};
 	Description m_description;
 
 	void readCharacter(std::ifstream& inf);
+
 };
 
 #endif

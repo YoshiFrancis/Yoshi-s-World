@@ -54,6 +54,9 @@
     <ClCompile Include="Swing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CharacterDictionary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inventory.h">
@@ -96,6 +99,15 @@
       <Filter>Header Files\Skills</Filter>
     </ClInclude>
     <ClInclude Include="Mom.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterDictionary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dad.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Brother.h">
       <Filter>Header Files\Characters</Filter>
     </ClInclude>
   </ItemGroup>

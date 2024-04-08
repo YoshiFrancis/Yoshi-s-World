@@ -1,10 +1,6 @@
 Level Name
 LevelDescription
 First Character Name
-Description text
-Classification (Enemy)
-Level
-Max Health
-Damage
-Speed
-Defence
+Second Character Name
+Third Character Name
+Nth Character Name
