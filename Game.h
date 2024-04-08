@@ -3,6 +3,7 @@
 
 #include "Player.h"
 #include "Level.h"
+#include "Swing.h"
 
 /*
 
@@ -24,6 +25,8 @@ public:
 	Game() : m_player{}
 	{
 		getUserInput();
+		Swing swing;
+		m_player.getSkills().addSkill(&swing);
 		Level(1, m_player);
 	}
 	void getUserInput();

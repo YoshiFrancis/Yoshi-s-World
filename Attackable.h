@@ -17,18 +17,23 @@ public:
 	Attackable(Status& status, Description& description) : m_status{ status }, m_description{ description }
 	{}
 
+	Attackable(Status& status, Description& description, SkillSet& skills) : m_status{ status }, m_description{ description }, m_skills{skills}
+	{}
+
 	void sayStats() const;
 	void sayDescription() const;
 	void takeDamage(int damage);
 	virtual bool attack(Attackable& enemy, int damage = 1);
 	inline Status& getStats() { return m_status; }
+	inline SkillSet& getSkills() { return m_skills; }
 	inline std::string_view getName() { return m_description.getName(); }
-	inline void addSkill(Skill* skill) { }
+	
 
 
 protected:
 	Status m_status;
 	Description m_description;
+	SkillSet m_skills;
 };
 
 
